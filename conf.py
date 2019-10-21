@@ -20,6 +20,7 @@
 project = 'Minion-Docs'
 copyright = '2019, Agents and Applied Robotics Group'
 author = 'Agents and Applied Robotics Group'
+master_doc = 'index'
 
 
 # -- General configuration ---------------------------------------------------
