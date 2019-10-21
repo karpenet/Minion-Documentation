@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Minion-Docs's documentation!
-=======================================
+Welcome to Minion Robot's documentation!
+========================================
 
 .. toctree::
    :maxdepth: 2
@@ -21,36 +21,29 @@ Indices and tables
 * :ref:`search`
 
 
-project
-========
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+Mechanical Design
+=================
 
-Look how easy it is to use:
+Electronics
+===========
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+Block Diagram
+-------------
+.. figure:: /images/electronics-block.png
+	:scale: 50 %
 
-Features
+	This block diagram shows the electronics architechture of the Minon Robot.
+
+
+Bill of Materials
+=================
+Hardware
 --------
+.. csv-table:: Minion Robot BOM
+	:file: docs/hardware-bom.csv
 
-- Be awesome
-- Make things faster
-
-Installation
-------------
-
-Install $project by running:
-
-    install project
-
-Kedar
------
-lfm;;w
-
-License
--------
-
-The project is licensed under the BSD license.
+Electronics
+-----------
+.. csv-table:: Minion Robot BOM
+	:file: docs/electronics-bom.csv
