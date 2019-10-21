@@ -35,6 +35,9 @@ Block Diagram
 
 	This block diagram shows the electronics architechture of the Minon Robot.
 
+Distribution Board
+------------------
+
 
 Bill of Materials
 =================
@@ -47,3 +50,13 @@ Electronics
 -----------
 .. csv-table:: Minion Robot BOM
 	:file: docs/electronics-bom.csv
+
+.. csv-table:: Minion Robot BOM
+	:file: docs/pcb-bom.csv
+
+
+ROS
+===
+
+ROS Arduino Bridge
+------------------
