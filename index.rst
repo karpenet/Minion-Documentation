@@ -31,16 +31,22 @@ Electronics
 Block Diagram
 -------------
 .. figure:: /images/electronics-block.png
-	:width: 50 %
-	:align: left
+	:width: 70 %
+	:align: center
 
 	This block diagram shows the electronics architechture of the Minon Robot.
 
 Distribution Board
 ------------------
 .. figure:: /images/mega-shield.png
-	:width: 100 %
-	:align: left
+	:width: 80 %
+	:align: center
+
+	This block diagram shows the electronics architechture of the Minon Robot.
+
+.. figure:: /images/distributor-board.png
+	:width: 80 %
+	:align: center
 
 	This block diagram shows the electronics architechture of the Minon Robot.
 
