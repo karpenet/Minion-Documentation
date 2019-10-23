@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Minion-Docs'
+project = 'Minion-Documentation'
 copyright = '2019, Agents and Applied Robotics Group'
 author = 'Agents and Applied Robotics Group'
 master_doc = 'index'

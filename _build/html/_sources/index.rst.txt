@@ -25,6 +25,7 @@ Indices and tables
 Mechanical Design
 =================
 
+
 Electronics
 ===========
 
@@ -64,6 +65,13 @@ Electronics
 
 .. csv-table:: Minion Robot BOM
 	:file: docs/pcb-bom.csv
+
+.. csv-table:: Motor Map
+	:file: docs/motor-map.csv
+
+
+
+
 
 
 ROS

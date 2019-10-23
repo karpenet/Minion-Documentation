@@ -1,0 +1,5 @@
+Motor,"PWMEnable","IOForward","IOBackward","ADCEncoder A","ADCEncoder B","ADCCurrent Sensor"
+NW,D3,D30,D32,A11,A10,A8
+NE,D2,D36,D34,A13,A12,A9
+SW,D5,D22,D24,A6,A5,A1
+SE,D4,D28,D26,A4,A3,A2
