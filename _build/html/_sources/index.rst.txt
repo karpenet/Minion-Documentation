@@ -3,15 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+****************************************
 Welcome to Minion Robot's documentation!
-========================================
-
+****************************************
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
-
+***************
 Hardware Design
-=================
+***************
 .. image:: /images/render.jpg
 	:width: 45 %
 	:align: left
@@ -23,7 +24,7 @@ Hardware Design
 
 
 Mechanical
-----------
+==========
 .. figure:: /images/place-up.jpg
 	:width: 70 %
 	:align: center
@@ -33,12 +34,13 @@ Mechanical
 	:align: center
 
 Electronics
------------
+===========
 
 .. csv-table:: Motor Map
 	:file: docs/motor-map.csv
 
 Block Diagram
+-------------
 
 .. figure:: /images/electronics-block.png
 	:width: 70 %
@@ -47,6 +49,7 @@ Block Diagram
 	This block diagram shows the electronics architechture of the Minon Robot.
 
 Distribution Board
+------------------
 
 .. figure:: /images/mega-shield.png
 	:width: 80 %
@@ -61,7 +64,7 @@ Distribution Board
 	This block diagram shows the electronics architechture of the Minon Robot.
 
 Bill of Materials
------------------
+=================
 **1. Mechanical Hardware BOM**
 
 .. csv-table:: 
@@ -75,11 +78,12 @@ Bill of Materials
 .. csv-table:: 
 	:file: docs/pcb-bom.csv
 
+*********
 Datasheet
-=========
+*********
 
 Mechanical Parameters
----------------------
+=====================
 +---------------------------+-----------------------------+
 | Parameter                 | Value                       |
 +===========================+=============================+
@@ -109,25 +113,25 @@ Mechanical Parameters
 +---------------------------+-----------------------------+
 
 Vehicle Design Parameters
--------------------------
-+---------------------------+----------------------+
-| Vehicle Design Parameter  | Value                |
-+===========================+======================+
-| Robot Mass (M)            | 4 Kg                 |
-+---------------------------+----------------------+
-| Wheel Radius(r)           | 0.035m               |
-+---------------------------+----------------------+
-| Worst Working Surface     | Asphalt (Cr = 0.05)  |
-+---------------------------+----------------------+
-| Number of Drive Wheels    | 4                    |
-+---------------------------+----------------------+
-| Nominal Acceleration(a)   | 0.1m/s^2             |
-+---------------------------+----------------------+
-| Maximum Surface incline(𝛂)| 3 degrees            |
-+---------------------------+----------------------+
+=========================
++-----------------------------+----------------------+
+| Vehicle Design Parameter    | Value                |
++=============================+======================+
+| Robot Mass (M)              | 4 Kg                 |
++-----------------------------+----------------------+
+| Wheel Radius(r)             | 0.035m               |
++-----------------------------+----------------------+
+| Worst Working Surface       | Asphalt (Cr = 0.05)  |
++-----------------------------+----------------------+
+| Number of Drive Wheels      | 4                    |
++-----------------------------+----------------------+
+| Nominal Acceleration(a)     | 0.1m/s^2             |
++-----------------------------+----------------------+
+| Maximum Surface incline(𝛂)  | 3 degrees            |
++-----------------------------+----------------------+
 
 Motor Torque Calculation
-------------------------
+========================
 To choose motors capable of producing enough torque to propel the vehicle, the Total Tractive
 Force has to be calculated.
 
@@ -154,7 +158,7 @@ Force has to be calculated.
 
 	:math:`\alpha` - Maximum Surface incline during normal operation
 
-**Step 2: Determining Inertial Force**
+**Step 3: Determining Inertial Force**
 	:math:`F_i = M * a`       
 	
 	where, 
@@ -163,19 +167,17 @@ Force has to be calculated.
 	
 	:math:`M` - Total Mass
 
-**Step 3: Determining Total Tractive Force Required**
+**Step 4: Determining Total Tractive Force Required**
 	:math:`TTF = F_r + F_g + F_i`
 
-**Step 4: Determining Total Motor Torque**
+**Step 5: Determining Total Motor Torque**
 	:math:`\text{Total Torque required} = (TTF * r) / n` 
 	
-	where,
-	
-	:math:`n` is the mechanical efficiency
+	where, :math:`n` is the mechanical efficiency
 
 	Mechanical efficiency is assumed as 40% ( Due to losses due to friction in the gearbox. Four stages of gears present. Each stage of gears lead to approximately 10-15% loss)
 
-**Step 5: Determining wheel torque**
+**Step 6: Determining wheel torque**
 	The torque required at each wheel 
 
 	.. math::
@@ -185,11 +187,11 @@ Force has to be calculated.
 
 
 
-
+***
 ROS
-===
+***
 
 ROS package for the Minion 2 robot can be found at: `Minion 2 ROS Package <https://github.com/aarg-kcis/Robot_Code/tree/minion2demo>`_
 
 ROS Arduino Bridge
-------------------
+==================
