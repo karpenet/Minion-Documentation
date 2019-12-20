@@ -25,6 +25,7 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,16 +82,16 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Welcome to Minion Robot’s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-<li><a class="reference internal" href="#mechanical-design">Mechanical Design</a></li>
-<li><a class="reference internal" href="#electronics">Electronics</a><ul>
-<li><a class="reference internal" href="#block-diagram">Block Diagram</a></li>
-<li><a class="reference internal" href="#distribution-board">Distribution Board</a></li>
+<li><a class="reference internal" href="#hardware-design">Hardware Design</a><ul>
+<li><a class="reference internal" href="#mechanical">Mechanical</a></li>
+<li><a class="reference internal" href="#electronics">Electronics</a></li>
+<li><a class="reference internal" href="#bill-of-materials">Bill of Materials</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bill-of-materials">Bill of Materials</a><ul>
-<li><a class="reference internal" href="#hardware">Hardware</a></li>
-<li><a class="reference internal" href="#id1">Electronics</a></li>
+<li><a class="reference internal" href="#datasheet">Datasheet</a><ul>
+<li><a class="reference internal" href="#mechanical-parameters">Mechanical Parameters</a></li>
+<li><a class="reference internal" href="#vehicle-design-parameters">Vehicle Design Parameters</a></li>
+<li><a class="reference internal" href="#motor-torque-calculation">Motor Torque Calculation</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ros">ROS</a><ul>
@@ -166,161 +167,23 @@
 <div class="toctree-wrapper compound">
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
+<div class="section" id="hardware-design">
+<h1>Hardware Design<a class="headerlink" href="#hardware-design" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/render.jpg"><img alt="_images/render.jpg" class="align-left" src="_images/render.jpg" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="_images/multi-view.jpg"><img alt="_images/multi-view.jpg" class="align-right" src="_images/multi-view.jpg" style="width: 45%;" /></a>
+<div class="section" id="mechanical">
+<h2>Mechanical<a class="headerlink" href="#mechanical" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/place-up.jpg"><img alt="_images/place-up.jpg" src="_images/place-up.jpg" style="width: 70%;" /></a>
 </div>
-<div class="section" id="mechanical-design">
-<h1>Mechanical Design<a class="headerlink" href="#mechanical-design" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/place-low.jpg"><img alt="_images/place-low.jpg" src="_images/place-low.jpg" style="width: 70%;" /></a>
+</div>
 </div>
 <div class="section" id="electronics">
-<h1>Electronics<a class="headerlink" href="#electronics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="block-diagram">
-<h2>Block Diagram<a class="headerlink" href="#block-diagram" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="_images/electronics-block.png"><img alt="_images/electronics-block.png" src="_images/electronics-block.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">This block diagram shows the electronics architechture of the Minon Robot.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="distribution-board">
-<h2>Distribution Board<a class="headerlink" href="#distribution-board" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="_images/mega-shield.png"><img alt="_images/mega-shield.png" src="_images/mega-shield.png" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-text">This block diagram shows the electronics architechture of the Minon Robot.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-center" id="id4">
-<a class="reference internal image-reference" href="_images/distributor-board.png"><img alt="_images/distributor-board.png" src="_images/distributor-board.png" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-text">This block diagram shows the electronics architechture of the Minon Robot.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="bill-of-materials">
-<h1>Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="hardware">
-<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default" id="id5">
-<caption><span class="caption-text">Minion Robot BOM</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Sl. No.</p></td>
-<td><p>Item</p></td>
-<td><p>Quantity</p></td>
-<td><p>Price</p></td>
-<td><p>Purchase Link</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>Raspberry Pi 3 B</p></td>
-<td><p>1</p></td>
-<td><p>INR 2,726.78</p></td>
-<td><p><a class="reference external" href="https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225">https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225</a></p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>Arduino Mega 2360</p></td>
-<td><p>1</p></td>
-<td><p>INR 869</p></td>
-<td><p><a class="reference external" href="https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB">https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB</a></p></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id1">
-<h2>Electronics<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default" id="id6">
-<caption><span class="caption-text">Minion Robot BOM</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Sl. No.</p></td>
-<td><p>Item</p></td>
-<td><p>Quantity</p></td>
-<td><p>Price</p></td>
-<td><p>Purchase Link</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>Raspberry Pi 3 B</p></td>
-<td><p>1</p></td>
-<td><p>INR 2,726.78</p></td>
-<td><p><a class="reference external" href="https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225">https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225</a></p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>Arduino Mega 2360</p></td>
-<td><p>1</p></td>
-<td><p>INR 869</p></td>
-<td><p><a class="reference external" href="https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB">https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB</a></p></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default" id="id7">
-<caption><span class="caption-text">Minion Robot BOM</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Sl. No.</p></td>
-<td><p>Item</p></td>
-<td><p>Quantity</p></td>
-<td><p>Price</p></td>
-<td><p>Purchase Link</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>Raspberry Pi 3 B</p></td>
-<td><p>1</p></td>
-<td><p>INR 2,726.78</p></td>
-<td><p><a class="reference external" href="https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225">https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225</a></p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>Arduino Mega 2360</p></td>
-<td><p>1</p></td>
-<td><p>INR 869</p></td>
-<td><p><a class="reference external" href="https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB">https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB</a></p></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default" id="id8">
-<caption><span class="caption-text">Motor Map</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<h2>Electronics<a class="headerlink" href="#electronics" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Motor Map</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -379,10 +242,459 @@ Current Sensor</p></td>
 </tr>
 </tbody>
 </table>
+<p>Block Diagram</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/electronics-block.png"><img alt="_images/electronics-block.png" src="_images/electronics-block.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-text">This block diagram shows the electronics architechture of the Minon Robot.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Distribution Board</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/mega-shield.png"><img alt="_images/mega-shield.png" src="_images/mega-shield.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text">This block diagram shows the electronics architechture of the Minon Robot.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/distributor-board.png"><img alt="_images/distributor-board.png" src="_images/distributor-board.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text">This block diagram shows the electronics architechture of the Minon Robot.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="bill-of-materials">
+<h2>Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permalink to this headline">¶</a></h2>
+<p><strong>1. Mechanical Hardware BOM</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Sl. No.</p></td>
+<td><p>Item</p></td>
+<td><p>Quantity</p></td>
+<td><p>Price</p></td>
+<td><p>Purchase Link</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Aluminium T-Slot Profile</p></td>
+<td><p>1.5m</p></td>
+<td><p>175/metre</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Cast Acrylic Sheet [300mm * 200mm]</p></td>
+<td><p>2</p></td>
+<td><p>100</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Corner Angle L Brackets</p></td>
+<td><p>13</p></td>
+<td><p>9.18</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Sliding T-Nut (M4)</p></td>
+<td><p>12</p></td>
+<td><p>6.67</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Square Nut (M4)</p></td>
+<td><p>18</p></td>
+<td><p>2.84</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Hex Nuts (M3)</p></td>
+<td><p>16</p></td>
+<td><p>1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Bolt (M4 * 10mm)</p></td>
+<td><p>6</p></td>
+<td><p>3.90</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Bolt (M4 * 6mm)</p></td>
+<td><p>24</p></td>
+<td><p>3.90</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Bolt (M3 * 10mm)</p></td>
+<td><p>16</p></td>
+<td><p>1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Bolt (M3 <a href="#id1"><span class="problematic" id="id2">*</span></a>6mm)</p></td>
+<td><p>90</p></td>
+<td><p>1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Motor Brackets</p></td>
+<td><p>4</p></td>
+<td><p>90</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Standoffs</p></td>
+<td><p>30</p></td>
+<td><p>1.42</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>Ribbon Cable</p></td>
+<td><p>6</p></td>
+<td><p>45</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>Rubber Wheels</p></td>
+<td><p>4</p></td>
+<td><p>60</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Electronics BOM</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Sl. No.</p></td>
+<td><p>Item</p></td>
+<td><p>Quantity</p></td>
+<td><p>Price</p></td>
+<td><p>Purchase Link</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Raspberry Pi 3 B</p></td>
+<td><p>1</p></td>
+<td><p>INR 2,726.78</p></td>
+<td><p><a class="reference external" href="https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225">https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225</a></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Arduino Mega 2360</p></td>
+<td><p>1</p></td>
+<td><p>INR 536</p></td>
+<td><p><a class="reference external" href="https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB">https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB</a></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Arduino Pro Mini</p></td>
+<td><p>1</p></td>
+<td><p>INR 200</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Motors</p></td>
+<td><p>4</p></td>
+<td><p>INR 2556</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Arduino Mega</p></td>
+<td><p>1</p></td>
+<td><p>INR 536</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Raspberry Pi</p></td>
+<td><p>1</p></td>
+<td><p>INR 3000</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Motor Drivers</p></td>
+<td><p>3</p></td>
+<td><p>INR 160</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Linear Actuator</p></td>
+<td><p>1</p></td>
+<td><p>INR 1777</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Decawave</p></td>
+<td><p>1</p></td>
+<td><p>INR 1775</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>12V Battery</p></td>
+<td><p>1</p></td>
+<td><p>INR 1150</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>IMU 9250</p></td>
+<td><p>1</p></td>
+<td><p>INR 430</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>PCB’s</p></td>
+<td><p>3</p></td>
+<td><p>INR 28.38</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>Buzzer Alarm</p></td>
+<td><p>1</p></td>
+<td><p>INR 88</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>LM2596 DC-DC Buck Converter</p></td>
+<td><p>1</p></td>
+<td><p>INR 159</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>Standoffs</p></td>
+<td><p>30</p></td>
+<td><p>INR 1.42</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>Ribbon Cable</p></td>
+<td><p>6</p></td>
+<td><p>INR 45</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>Level Converter</p></td>
+<td><p>1</p></td>
+<td><p>INR 65</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>Toggle Switch</p></td>
+<td><p>1</p></td>
+<td><p>INR 20</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Sl. No.</p></td>
+<td><p>Item</p></td>
+<td><p>Quantity</p></td>
+<td><p>Price</p></td>
+<td><p>Purchase Link</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Raspberry Pi 3 B</p></td>
+<td><p>1</p></td>
+<td><p>INR 2,726.78</p></td>
+<td><p><a class="reference external" href="https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225">https://in.element14.com/raspberry-pi/raspberrypi3-modb-1gb/sbc-raspberry-pi-3-mod-b-1gb-ram/dp/2525225</a></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Arduino Mega 2360</p></td>
+<td><p>1</p></td>
+<td><p>INR 869</p></td>
+<td><p><a class="reference external" href="https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB">https://robu.in/product/mega-2560-atmega2560-16au-board-without-usb-cable/?gclid=Cj0KCQjwrrXtBRCKARIsAMbU6bEp9jeNAUYntCyH5mQZgtlBES8t50CTlqRcSdF8ermEJk-fCF_7tPwaAm5DEALw_wcB</a></p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="datasheet">
+<h1>Datasheet<a class="headerlink" href="#datasheet" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mechanical-parameters">
+<h2>Mechanical Parameters<a class="headerlink" href="#mechanical-parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Robot Mass</p></td>
+<td><p>4 kg</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total Length</p></td>
+<td><p>0.3 m</p></td>
+</tr>
+<tr class="row-even"><td><p>Total Width</p></td>
+<td><p>0.24 m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total height</p></td>
+<td><p>0.26 m</p></td>
+</tr>
+<tr class="row-even"><td><p>Wheel Track</p></td>
+<td><p>0.22 m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wheel Base</p></td>
+<td><p>0.18 m</p></td>
+</tr>
+<tr class="row-even"><td><p>Tire Radius</p></td>
+<td><p>0.035 m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wheel Width</p></td>
+<td><p>0.02 m</p></td>
+</tr>
+<tr class="row-even"><td><p>Maximum Speed</p></td>
+<td><p>0.44 m/s (Without Payload)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maximum Payload</p></td>
+<td><p>13 kg</p></td>
+</tr>
+<tr class="row-even"><td><p>Payload Ratio</p></td>
+<td><p>3.25</p></td>
+</tr>
+<tr class="row-odd"><td><p>Battery</p></td>
+<td><p>Li-Ion 11.1V 4400 mAH</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="vehicle-design-parameters">
+<h2>Vehicle Design Parameters<a class="headerlink" href="#vehicle-design-parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Vehicle Design Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Robot Mass (M)</p></td>
+<td><p>4 Kg</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wheel Radius(r)</p></td>
+<td><p>0.035m</p></td>
+</tr>
+<tr class="row-even"><td><p>Worst Working Surface</p></td>
+<td><p>Asphalt (Cr = 0.05)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Number of Drive Wheels</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Nominal Acceleration(a)</p></td>
+<td><p>0.1m/s^2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maximum Surface incline(𝛂)</p></td>
+<td><p>3 degrees</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="motor-torque-calculation">
+<h2>Motor Torque Calculation<a class="headerlink" href="#motor-torque-calculation" title="Permalink to this headline">¶</a></h2>
+<p>To choose motors capable of producing enough torque to propel the vehicle, the Total Tractive
+Force has to be calculated.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\text{Total Tractive Force}(TTF) = \text{Frictional Rolling Resistance}(F_r) + \text{Grade Resistance(F_g)} \\ + \text{Inertial force}(F_i)\end{split}\]</div>
+<dl>
+<dt><strong>Step 1: Determining Frictional Rolling Resistance</strong></dt><dd><p><span class="math notranslate nohighlight">\(F_r = C_r * N\)</span></p>
+<p>where,</p>
+<p><span class="math notranslate nohighlight">\(Cr\)</span> - Coefficient Of Rolling Friction</p>
+<p><span class="math notranslate nohighlight">\(N\)</span> - Normal force of wheel on the surface</p>
+</dd>
+<dt><strong>Step 2: Determining Grade Resistance</strong></dt><dd><p><span class="math notranslate nohighlight">\(F_g = M * g * \sin (\alpha)\)</span></p>
+<p>where,</p>
+<p><span class="math notranslate nohighlight">\(M\)</span> - Total Mass</p>
+<p><span class="math notranslate nohighlight">\(G\)</span> - Acceleration due to gravity</p>
+<p><span class="math notranslate nohighlight">\(\alpha\)</span> - Maximum Surface incline during normal operation</p>
+</dd>
+<dt><strong>Step 2: Determining Inertial Force</strong></dt><dd><p><span class="math notranslate nohighlight">\(F_i = M * a\)</span></p>
+<p>where,</p>
+<p><span class="math notranslate nohighlight">\(a\)</span> - Acceleration</p>
+<p><span class="math notranslate nohighlight">\(M\)</span> - Total Mass</p>
+</dd>
+<dt><strong>Step 3: Determining Total Tractive Force Required</strong></dt><dd><p><span class="math notranslate nohighlight">\(TTF = F_r + F_g + F_i\)</span></p>
+</dd>
+<dt><strong>Step 4: Determining Total Motor Torque</strong></dt><dd><p><span class="math notranslate nohighlight">\(\text{Total Torque required} = (TTF * r) / n\)</span></p>
+<p>where,</p>
+<p><span class="math notranslate nohighlight">\(n\)</span> is the mechanical efficiency</p>
+<p>Mechanical efficiency is assumed as 40% ( Due to losses due to friction in the gearbox. Four stages of gears present. Each stage of gears lead to approximately 10-15% loss)</p>
+</dd>
+<dt><strong>Step 5: Determining wheel torque</strong></dt><dd><p>The torque required at each wheel</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} (T_w)  &amp;=  \frac{\text{Total Torque}}{\text{Number of Drive Wheels}} \\ \\
+&amp;=  \frac{\text{Total Torque}}{4}\end{split}\]</div>
+</dd>
+</dl>
 </div>
 </div>
 <div class="section" id="ros">
 <h1>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h1>
+<p>ROS package for the Minion 2 robot can be found at: <a class="reference external" href="https://github.com/aarg-kcis/Robot_Code/tree/minion2demo">Minion 2 ROS Package</a></p>
 <div class="section" id="ros-arduino-bridge">
 <h2>ROS Arduino Bridge<a class="headerlink" href="#ros-arduino-bridge" title="Permalink to this headline">¶</a></h2>
 </div>

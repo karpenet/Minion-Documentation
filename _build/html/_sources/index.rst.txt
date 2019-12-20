@@ -10,27 +10,36 @@ Welcome to Minion Robot's documentation!
    :maxdepth: 2
 
 
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-
-
-Mechanical Design
+Hardware Design
 =================
+.. image:: /images/render.jpg
+	:width: 45 %
+	:align: left
 
+
+.. image:: /images/multi-view.jpg
+	:width: 45 %
+	:align: right
+
+
+Mechanical
+----------
+.. figure:: /images/place-up.jpg
+	:width: 70 %
+	:align: center
+
+.. figure:: /images/place-low.jpg
+	:width: 70 %
+	:align: center
 
 Electronics
-===========
+-----------
+
+.. csv-table:: Motor Map
+	:file: docs/motor-map.csv
 
 Block Diagram
--------------
+
 .. figure:: /images/electronics-block.png
 	:width: 70 %
 	:align: center
@@ -38,7 +47,7 @@ Block Diagram
 	This block diagram shows the electronics architechture of the Minon Robot.
 
 Distribution Board
-------------------
+
 .. figure:: /images/mega-shield.png
 	:width: 80 %
 	:align: center
@@ -52,30 +61,135 @@ Distribution Board
 	This block diagram shows the electronics architechture of the Minon Robot.
 
 Bill of Materials
-=================
-Hardware
---------
-.. csv-table:: Minion Robot BOM
+-----------------
+**1. Mechanical Hardware BOM**
+
+.. csv-table:: 
 	:file: docs/hardware-bom.csv
 
-Electronics
------------
-.. csv-table:: Minion Robot BOM
+**2. Electronics BOM**
+
+.. csv-table:: 
 	:file: docs/electronics-bom.csv
 
-.. csv-table:: Minion Robot BOM
+.. csv-table:: 
 	:file: docs/pcb-bom.csv
 
-.. csv-table:: Motor Map
-	:file: docs/motor-map.csv
+Datasheet
+=========
+
+Mechanical Parameters
+---------------------
++---------------------------+-----------------------------+
+| Parameter                 | Value                       |
++===========================+=============================+
+| Robot Mass                | 4 kg                        |
++---------------------------+-----------------------------+
+| Total Length              | 0.3 m                       |
++---------------------------+-----------------------------+
+| Total Width               | 0.24 m                      |
++---------------------------+-----------------------------+
+| Total height              | 0.26 m                      |
++---------------------------+-----------------------------+
+| Wheel Track               | 0.22 m                      |
++---------------------------+-----------------------------+
+| Wheel Base                | 0.18 m                      |
++---------------------------+-----------------------------+
+| Tire Radius               | 0.035 m                     |
++---------------------------+-----------------------------+
+| Wheel Width               | 0.02 m                      |
++---------------------------+-----------------------------+
+| Maximum Speed             | 0.44 m/s (Without Payload)  |
++---------------------------+-----------------------------+
+| Maximum Payload           | 13 kg                       |
++---------------------------+-----------------------------+
+| Payload Ratio             | 3.25                        |
++---------------------------+-----------------------------+
+| Battery                   | Li-Ion 11.1V 4400 mAH       |
++---------------------------+-----------------------------+
+
+Vehicle Design Parameters
+-------------------------
++---------------------------+----------------------+
+| Vehicle Design Parameter  | Value                |
++===========================+======================+
+| Robot Mass (M)            | 4 Kg                 |
++---------------------------+----------------------+
+| Wheel Radius(r)           | 0.035m               |
++---------------------------+----------------------+
+| Worst Working Surface     | Asphalt (Cr = 0.05)  |
++---------------------------+----------------------+
+| Number of Drive Wheels    | 4                    |
++---------------------------+----------------------+
+| Nominal Acceleration(a)   | 0.1m/s^2             |
++---------------------------+----------------------+
+| Maximum Surface incline(𝛂)| 3 degrees            |
++---------------------------+----------------------+
+
+Motor Torque Calculation
+------------------------
+To choose motors capable of producing enough torque to propel the vehicle, the Total Tractive
+Force has to be calculated.
+
+.. math:: \text{Total Tractive Force}(TTF) = \text{Frictional Rolling Resistance}(F_r) + \text{Grade Resistance(F_g)} \\ + \text{Inertial force}(F_i)
 
 
+**Step 1: Determining Frictional Rolling Resistance**
+	:math:`F_r = C_r * N`
+
+	where, 
+
+	:math:`Cr` - Coefficient Of Rolling Friction
+
+	:math:`N` - Normal force of wheel on the surface
+
+**Step 2: Determining Grade Resistance**
+	:math:`F_g = M * g * \sin (\alpha)`
+	
+	where,
+	
+	:math:`M` - Total Mass
+
+	:math:`G` - Acceleration due to gravity
+
+	:math:`\alpha` - Maximum Surface incline during normal operation
+
+**Step 2: Determining Inertial Force**
+	:math:`F_i = M * a`       
+	
+	where, 
+	
+	:math:`a` - Acceleration
+	
+	:math:`M` - Total Mass
+
+**Step 3: Determining Total Tractive Force Required**
+	:math:`TTF = F_r + F_g + F_i`
+
+**Step 4: Determining Total Motor Torque**
+	:math:`\text{Total Torque required} = (TTF * r) / n` 
+	
+	where,
+	
+	:math:`n` is the mechanical efficiency
+
+	Mechanical efficiency is assumed as 40% ( Due to losses due to friction in the gearbox. Four stages of gears present. Each stage of gears lead to approximately 10-15% loss)
+
+**Step 5: Determining wheel torque**
+	The torque required at each wheel 
+
+	.. math::
+
+   		(T_w)  &=  \frac{\text{Total Torque}}{\text{Number of Drive Wheels}} \\ \\
+               &=  \frac{\text{Total Torque}}{4}
 
 
 
 
 ROS
 ===
+
+ROS package for the Minion 2 robot can be found at: `Minion 2 ROS Package <https://github.com/aarg-kcis/Robot_Code/tree/minion2demo>`_
 
 ROS Arduino Bridge
 ------------------

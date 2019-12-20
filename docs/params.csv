@@ -1,0 +1,13 @@
+Parameter,Value
+Mass of Robot,4kg
+Length of Robot,0.3m
+Width of Robot,0.24m
+Height of Robot,0.26m
+Wheel Track,0.22m
+Wheel Base,0.18m
+Radius of Tire,0.035m
+Width of Wheel,0.02m
+Maximum Speed,0.44 m/s ( Without Payload)
+Maximum Payload,13kg
+Payload Ratio,3.25
+Battery,Li-Ion 11.1V 4400 mAH
